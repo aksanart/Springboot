@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.soapserveryt.com/api/soap" xmlns:tns="http://www.soapserveryt.com/api/soap" elementFormDefault="qualified">
+    <!-- client request -->
+    <element name="ClientRequest">
+        <complexType>
+            <sequence>
+                <element name="username" type="string" />
+                <element name="apiKey" type="string" />
+            </sequence>
+        </complexType>
+    </element>
+    <!-- end client request -->
+
+    <!-- server response -->
+    <element name="ServerRespond">
+        <complexType>
+            <sequence>
+                <element name="isApprove" type="boolean" />
+                <element name="fullname" type="string" />
+                <element name="salary" type="string" />
+                <element name="address" type="string" />
+                <element name="errorMsg" type="string" maxOccurs="unbounded" />
+            </sequence>
+        </complexType>
+    </element>
+    <!-- end server response -->
+</schema>
